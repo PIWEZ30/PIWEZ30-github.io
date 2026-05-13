@@ -1,0 +1,337 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #020617;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .35);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #38bdf8;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo-sekolah {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* MENU DESKTOP */
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)),
+        url('4foto.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 90px;
+    color: #38bdf8;
+    text-shadow: 0 0 20px #38bdf8;
+}
+
+.hero-content p {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #e2e8f0;
+}
+
+.hero-content button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    background: #38bdf8;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero-content button:hover {
+    transform: scale(1.05);
+    background: #0ea5e9;
+}
+
+/* ================= GALLERY ================= */
+.gallery-section {
+    padding: 100px 10%;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 50px;
+    color: #38bdf8;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+    transition: .3s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    filter: grayscale(100%);
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .9));
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+/* ================= VIDEO ================= */
+.video-section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.video-section h2 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #38bdf8;
+}
+
+.video-portrait {
+    width: 320px;
+    height: 570px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+}
+
+/* ================= QUOTE ================= */
+.quote {
+    padding: 70px 5%;
+    background: rgba(255, 255, 255, .03);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    margin: 50px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.quote p {
+    font-size: 20px;
+    line-height: 1.9;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #000814;
+    text-align: center;
+    padding: 30px;
+    color: #94a3b8;
+}
+
+
+
+/* ================= STARS ================= */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px, 100px 100px;
+    opacity: .35;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+
+    /* NAVBAR */
+    @media(max-width:768px) {
+    
+            @media(max-width:768px) {
+            
+                    .navbar {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 12px 5%;
+                    }
+            
+                    .navbar ul {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+            
+                        position: static;
+                        background: transparent;
+                        padding: 0;
+                        margin: 0;
+            
+                        overflow-x: auto;
+                        white-space: nowrap;
+            
+                        max-width: 70vw;
+                    }
+            
+                    .navbar ul li {
+                        flex-shrink: 0;
+                    }
+            
+                    .navbar a {
+                        font-size: 14px;
+                    }
+            
+                }
+
+    /* HERO */
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    .hero-content button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    /* GALLERY */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .big,
+    .wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    /* VIDEO */
+    .video-portrait {
+        width: 90%;
+        height: auto;
+    }
+
+    /* QUOTE */
+    .quote {
+        padding: 80px 7%;
+    }
+
+    .quote p {
+        font-size: 18px;
+        line-height: 2;
+    }
+
+}
